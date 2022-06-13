@@ -1,0 +1,76 @@
+/*
+  celadon-blue: rgb(0, 129, 175)
+  cyan-process: rgb(0, 171, 231)
+  vivid-sky-blue: rgb(49, 199, 255)
+  wheat: rgb(234, 210, 172)
+  sunray: rgb(234, 186, 107)
+*/
+
+@font-face {
+  font-family: 'CharisCIL';
+  src: url('./assets/CharisSIL-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('./assets/SourceSansPro-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 129, 175);
+}
+
+.quote-mounted {
+  opacity: 1 !important;
+}
+
+.quote-box {
+  background-color: rgb(234, 210, 172);
+  padding: 2em;
+  border-radius: 5px;
+  width: 90vw;
+  text-align: center;
+  font: 1em 'Source Sans Pro', serif;
+  opacity: 0;
+  transition: opacity 0.5s 0.2s;
+}
+
+#text, #author, #new-quote, #tweet-code {
+  margin: 1em 1em 0 0;
+}
+
+#new-quote {
+  border: 0;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(234, 186, 107);
+}
+
+#new-quote:hover {
+  background-color: rgb(215, 144, 29);
+}
+
+#author {
+  font: italic 0.8em 'CharisCIL', serif;
+}
+
+@media (min-width: 600px) {
+  .quote-box {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .quote-box {
+    width: 60vw;
+  }
+}

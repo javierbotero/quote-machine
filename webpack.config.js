@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -25,13 +24,16 @@ module.exports = {
         test: /\.(js|jsx)/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource'
       }
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Quote Machine',
-      template: 'index.html'
-    })
-  ]
+  }
 }
